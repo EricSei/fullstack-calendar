@@ -30,10 +30,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/api/v1/events', events);
 
-app.use(express.static(path.join(__dirname, './client/build')))//serves the index.html
+app.use(express.static(path.join(__dirname +'/client/build/')))//serves the index.html
 
 app.get('*', (req, res)=>{
-  res.sendFile(path.join(__dirname, './client/build/index.html'));
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
 })
 
 // catch 404 and forward to error handler
