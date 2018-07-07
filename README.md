@@ -1,5 +1,5 @@
 # Event App React-Redux Already Packaged 
-## Website [Demo](https://lower-toonie-23867.herokuapp.com/)
+## Website [Demo](https://radiant-spire-15760.herokuapp.com/)
 ## Setup
 - run `npm install`
 ## RUN
