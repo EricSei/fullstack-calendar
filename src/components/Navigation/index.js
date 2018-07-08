@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import { Link } from 'react-router-dom';
 import * as routes from 'constants/routes';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import Paper from '@material-ui/core/Paper';
 import {Card, CardText} from 'material-ui/Card';
 import Button from '@material-ui/core/Button';
@@ -22,7 +22,7 @@ class NavigationPanel extends Component {
 					<header className="App-header">
 						<div className='dots'>
 							<Link to={routes.LANDING}> 
-								<img src={logo} className="App-logo" alt="logo" />
+								{/* <img src={logo} className="App-logo" alt="logo" /> */}
 							</Link>
 
 							<Link to={routes.LANDING}> <CardText> <h2> Home </h2> </CardText> </Link>  
