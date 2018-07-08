@@ -13,16 +13,19 @@ class Modal extends Component {
 			wasClickedLeft: false,
 			wasClickedRight: false,
 		};
+		this.onReset = this.onReset.bind(this);
+		this.onClickLeft = this.onClickLeft.bind(this);
+		this.onClickRight = this.onClickRight.bind(this);
 	}
 
-	onReset = () => {
+	onReset(){
 		this.setState({
 			wasClickedLeft: false,
 			wasClickedRight: false
 		})
 	}
 
-	onClickLeft = () =>{
+	onClickLeft(){
 		this.setState({wasClickedLeft: !this.state.wasClickedLeft}, function() {
 			if (this.state.wasClickedRight && this.state.wasClickedLeft) {
 				this.setState({wasClickedRight: false});
@@ -31,7 +34,7 @@ class Modal extends Component {
 
 	}
 
-	onClickRight = () => {
+	onClickRight(){
 		this.setState({wasClickedRight: !this.state.wasClickedRight}, function(){
 			if (this.state.wasClickedRight && this.state.wasClickedLeft ) {
 				this.setState({wasClickedLeft: false});

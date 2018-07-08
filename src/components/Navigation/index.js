@@ -9,8 +9,12 @@ import { signOutThunk } from 'actions'
 import { connect } from 'react-redux'
 
 class NavigationPanel extends Component {
+	constructor(props) {
+		super(props);
+		this.onClickSignOut = this.onClickSignOut.bind(this);
+	}
 
-	onClickSignOut = () => {
+	onClickSignOut(){
 		this.props.signOutAction();
 	}
 

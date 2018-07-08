@@ -58,6 +58,7 @@ class Calander extends React.Component {
 		this.apiEvents = this.apiEvents.bind(this);
 		this.onEditOpen = this.onEditOpen.bind(this);
 		this.onDelete = this.onDelete.bind(this);
+		 
 	}
 
 
@@ -159,7 +160,7 @@ class Calander extends React.Component {
 		}
 	}
 
-	handleClose = () => {
+	handleClose(){
 		this.setState({ open: !this.state.open });
 	};
 

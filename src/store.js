@@ -4,10 +4,11 @@ import { createBrowserHistory, createMemoryHistory } from 'history';
 import rootReducer from './reducers'
 import logger from 'redux-logger'
 import thunk from 'redux-thunk';
-import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
-import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
-import LoadingSpinner from 'components/LoadingSpinner';
+/*
+//import { persistStore, persistReducer } from 'redux-persist';
+//import storage from 'redux-persist/lib/storage';
+//import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
+//import LoadingSpinner from 'components/LoadingSpinner';
 
 const persistConfig = {
 	key: 'root',
@@ -17,6 +18,7 @@ const persistConfig = {
 };
 
 const pReducer = persistReducer(persistConfig, rootReducer);
+*/
 
 // A nice helper to tell us if we're on the server
 export const isServer = !(
@@ -44,7 +46,7 @@ export default (url = '/') => {
 		}
 	}
 
-	const middlewares = [routerMiddleware(history),thunk,logger];
+	const middleware = [routerMiddleware(history),thunk,logger];
 
 	const composedEnhancers = compose(
 		applyMiddleware(...middleware),
@@ -61,7 +63,7 @@ export default (url = '/') => {
 
 	// Create the store
 	const store = createStore(
-	connectRouter(history)(pReducer),
+	connectRouter(history)(rootReducer),
 		initialState,
 		composedEnhancers
 );

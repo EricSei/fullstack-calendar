@@ -19,6 +19,7 @@ class SignExpanded extends Component {
 		this.onSubmitSignUp = this.onSubmitSignUp.bind(this);
 		this.onSubmitSignIn = this.onSubmitSignIn.bind(this);
 		this.handleChange = this.handleChange.bind(this);
+		this.isFinished = this.isFinished.bind(this);
 	}
 
 	componentDidMount () {
@@ -26,7 +27,7 @@ class SignExpanded extends Component {
 	}
 
 
-	isFinished = () => {
+	isFinished(){
 		this.setState({animIsFinished: true});
 	}
 

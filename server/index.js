@@ -36,6 +36,10 @@ require('babel-register')({
 	]
 });
 
+require("babel-core").transform("code", {
+  plugins: ["transform-object-rest-spread"]
+});
+
 require('babel-core/register')({ presets: ['es2015', 'react'], "plugins": [
 	["module-resolver", {
 		"root": ["./src"],
@@ -48,4 +52,4 @@ require('babel-core/register')({ presets: ['es2015', 'react'], "plugins": [
 
 
 // Now that the nonsense is over... load up the server entry point
-require('./app.js');
+module.exports = require('./app.js');
