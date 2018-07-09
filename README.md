@@ -1,6 +1,7 @@
 # Event App React-Redux Already Packaged 
 ## Website [Demo](https://radiant-spire-15760.herokuapp.com/)
-## Server Side Rendering Application `git checkout ssr || git checkout non-ssr`
+## Server Side Rendering Application 
+- `git checkout ssr || git checkout non-ssr`
 ## Setup
 - run `npm install`
 ## RUN
